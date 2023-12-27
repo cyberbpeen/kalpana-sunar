@@ -114,6 +114,13 @@ img {
   background: var(--color-body);
 }
 
+.section__header {
+  max-width: 50rem;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
 .container {
   width: 100%;
   max-width: var(--width-container);
@@ -132,6 +139,41 @@ img {
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
   gap: 4rem;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 1.8rem 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.4rem;
+  font-size: var(--font-h4);
+  font-weight: var(--font-medium);
+  color: var(--color-body);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background: var(--color-dark);
+  transform: translateY(-0.6rem);
+}
+
+.btn-filter {
+  padding: 0.8rem 1.6rem;
+  color: var(--color-text);
+  letter-spacing: 2px;
+  font-weight: var(--font-semibold);
+}
+
+.btn-filter.active,
+.btn-filter:hover {
+  color: var(--color-primary);
 }
 
 @media screen and (max-width: 768px) {
