@@ -1,0 +1,143 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--height-header);
+  background: var(--color-light);
+  box-shadow: var(--shadow-header);
+  z-index: var(--z-index-menu);
+}
+
+.nav {
+  justify-content: space-between;
+  height: 100%;
+}
+
+.nav__brand {
+  font-size: var(--font-h3);
+  color: var(--color-primary-dark);
+  font-weight: var(--font-bold);
+  letter-spacing: 1px;
+}
+
+.nav__buttons {
+  gap: 2rem;
+  font-size: 2rem;
+  color: var(--color-dark);
+  transition: var(--transition);
+}
+
+.theme__toggle,
+.nav__toggle {
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav__icon,
+.nav__toggle {
+  display: none;
+}
+
+.theme__toggle:hover,
+.nav__toggle:hover {
+  color: var(--color-primary);
+}
+
+.nav__menu {
+  margin-left: auto;
+  margin-right: 3rem;
+}
+
+.nav__list {
+  display: flex;
+  column-gap: 4rem;
+}
+
+.nav__link {
+  position: relative;
+  font-size: var(--font-body);
+  font-weight: var(--font-normal);
+  transition: var(--transition);
+}
+
+.nav__link.active,
+.nav__link:hover {
+  color: var(--color-primary);
+}
+
+.nav__link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.4rem;
+  background: var(--color-primary);
+  background: linear-gradient(
+    121.77deg,
+    var(--color-primary) 13.51%,
+    var(--color-primary-dark) 174.68%
+  );
+  bottom: -3rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  transform: scale(0);
+}
+
+.nav__link.active::before {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 992px) {
+  .nav__toggle {
+    display: block;
+  }
+
+  .nav__menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    background-color: var(--color-light);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+  }
+
+  .show-menu {
+    left: 0;
+  }
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem;
+    gap: 1rem;
+    flex-direction: column;
+    color: var(--color-text);
+    border-bottom: 0.1rem solid #eaeaea;
+  }
+
+  .nav__list:nth-child(1) {
+    border-top: 0.1rem solid #eaeaea;
+  }
+
+  .nav__link.active {
+    color: var(--color-primary);
+    border-right: 0.3rem solid var(--color-primary);
+  }
+
+  .nav__link.active::before {
+    transform: scale(0);
+  }
+
+  .nav__icon {
+    display: block;
+    font-size: 2.4rem;
+  }
+}

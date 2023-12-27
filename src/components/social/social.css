@@ -1,0 +1,20 @@
+.social__list {
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.social__link {
+  background-color: var(--color-body);
+  color: var(--color-primary-dark);
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.social__link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
