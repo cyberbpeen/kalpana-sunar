@@ -103,6 +103,11 @@ img {
   display: block;
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
 /* Reausable CSS Classes
 --------------------------------------------------------------*/
 

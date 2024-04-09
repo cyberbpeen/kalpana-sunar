@@ -2,7 +2,7 @@ import React from "react";
 import "./about.css";
 
 const About = () => {
-  return <div>About</div>;
+  return <section className="about__section section"></section>;
 };
 
 export default About;
